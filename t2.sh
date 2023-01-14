@@ -4,8 +4,8 @@ cd /root/tt1
 
 sed -n -e '/[45][0-9][0-9]$/p' *.result >$t.fail
 
-awk '{print$1}' $t.fail >/tmp/A.fail
-
+awk '{print$1}' $t.fail >/tmp/B.fail
+awk -F/ '{print $1}' /tmp/B.fail > /tmp/A.fail
 for i in $(cat /tmp/A.fail); do
 	echo
 	echo $i >>$t.fail
