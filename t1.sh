@@ -2,7 +2,7 @@
 
 cd /root/tt1
 i=0
-total=$(awk '{print NR}' list | tail -n 1)
+total=$(awk '{print NR}' list |tail -n 1)
 sed -e 's/https:\/\///g' list >list1
 sed -e 's/http:\/\///g' list1 >list
 rm list1
